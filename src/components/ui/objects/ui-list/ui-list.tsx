@@ -1,27 +1,33 @@
 import { cn } from '@/utils/class-name'
+import { VariantProps, cva } from 'class-variance-authority'
 import { Children } from 'react'
 
-export interface UiListProps {
+const uiListVariants = cva('flex', {
+    variants: {
+        direction: {
+            row: 'flex-row',
+            column: 'flex-col',
+        },
+    },
+})
+
+export interface UiListProps extends VariantProps<typeof uiListVariants> {
     children?: React.ReactNode
     className?: string
-    direction: 'row' | 'column'
-}
-
-const directionListClasses: Record<UiListProps['direction'], string> = {
-    row: 'flex-row',
-    column: 'flex-col',
+    tag?: 'ul' | 'ol'
 }
 
 export const UiList = ({
     children,
     className,
     direction = 'row',
+    tag: Tag = 'ul',
 }: UiListProps) => {
     return (
-        <ul className={cn('flex', className, directionListClasses[direction])}>
+        <Tag className={cn(uiListVariants({ direction, className }))}>
             {Children.map(children, (child, index) => {
                 return <li key={index}>{child}</li>
             })}
-        </ul>
+        </Tag>
     )
 }
