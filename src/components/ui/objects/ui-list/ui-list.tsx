@@ -1,7 +1,7 @@
 import { cn } from '@/utils/class-name'
 import { Children } from 'react'
 
-interface UiListProps {
+export interface UiListProps {
     children?: React.ReactNode
     className?: string
     direction: 'row' | 'column'
