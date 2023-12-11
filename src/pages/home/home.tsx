@@ -1,6 +1,7 @@
 import { HeroSection } from './components/hero-section'
 import { Container } from '@/components/ui/objects/container/container'
 import { InstructionSection } from './components/instruction-section'
+import { Sponsors } from '@/components/common/sponsors/sponsors'
 
 export const Home = () => {
     return (
@@ -10,6 +11,7 @@ export const Home = () => {
                 <span className="ml-[calc((100%-100vw)/2)] mr-[calc((100%-100vw)/2)] border border-black xl:m-0 xl:-mb-14 xl:-mt-20 xl:mr-0"></span>
                 <InstructionSection />
             </div>
+            <Sponsors />
         </Container>
     )
 }
