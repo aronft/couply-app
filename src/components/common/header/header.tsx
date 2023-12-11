@@ -3,7 +3,8 @@ import { Menu } from '../menu/menu'
 import { useState } from 'react'
 import { cn } from '@/utils/class-name'
 import { Container } from '@/components/ui/objects/container/container'
-import { X } from '@phosphor-icons/react'
+import { ArrowDown, X } from '@phosphor-icons/react'
+import { Button } from '@/components/ui/atoms/button/buttons'
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,24 +14,24 @@ export const Header = () => {
                 <Logo />
                 <nav className="flex items-center">
                     <div
-                        className={cn('', {
+                        className={cn('block', {
                             '': !isMenuOpen,
-                            'md-max:fixed md-max:top-0 md-max:h-screen  md-max:w-full md-max:bg-green-600 right-0':
+                            'md-max:fixed md-max:right-0 md-max:top-0  md-max:h-screen md-max:w-full md-max:bg-green-600':
                                 isMenuOpen,
                         })}
                     >
                         <Menu
                             className={cn(
-                                'md-max:text-white mt-20 gap-5 text-center',
+                                'flex-row gap-5 text-center md-max:mt-20 md-max:text-white',
                                 {
-                                    flex: isMenuOpen,
-                                    hidden: !isMenuOpen,
+                                    'md-max:flex': isMenuOpen,
+                                    'md-max:hidden': !isMenuOpen,
                                 },
                             )}
                         />
                     </div>
                     <button
-                        className="md-max:block hidden"
+                        className="hidden md-max:block"
                         aria-label="menu button"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
@@ -55,6 +56,9 @@ export const Header = () => {
                         )}
                     </button>
                 </nav>
+                <Button className="gap-3">
+                    Start Saving <ArrowDown weight="bold" />
+                </Button>
             </Container>
         </header>
     )
