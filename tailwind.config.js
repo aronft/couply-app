@@ -3,6 +3,15 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            minWidth: {
+                7: '1.75rem',
+            },
+            spacing: {
+                'full-w': '[calc((100%-100vw)/2)]',
+            },
+            minHeight: {
+                7: '1.75rem',
+            },
             screens: {
                 'sm-max': { max: '639px' },
                 'md-max': { max: '767px' },

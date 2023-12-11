@@ -1,8 +1,14 @@
 import { Avatar } from '@/components/ui/molecules/avatar/avatar'
 import User from '@/assets/user-1.png'
-export const HeroSection = () => {
+import { cn } from '@/utils/class-name'
+export const HeroSection = ({ className }: { className?: string }) => {
     return (
-        <section className="flex flex-col items-center gap-8 py-8 lg:items-start lg:gap-12 lg:pb-14 lg:pt-20">
+        <section
+            className={cn(
+                'flex flex-col items-center gap-8 lg:items-start lg:gap-12 ',
+                className,
+            )}
+        >
             <h1 className="relative inline max-w-2xl text-center text-3xl font-bold leading-relaxed lg:text-left  lg:text-5xl lg:leading-relaxed xl:max-w-4xl ">
                 Shopping with coupons, applied automatically!
                 <svg
