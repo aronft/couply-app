@@ -11,6 +11,9 @@ export default {
             borderRadius: {
                 '5xl': '2.78125rem',
             },
+            boxShadow: {
+                sm: '4px 4px 0px 0px rgba(0, 0, 0, 0.06)',
+            },
         },
         colors: {
             white: '#FFFFFF',
@@ -23,6 +26,7 @@ export default {
             },
             green: {
                 100: '#E8F5E2',
+                300: '#C6DBBD',
                 400: '#9BC588',
                 500: '#779469',
                 600: '#608A4D',
