@@ -8,6 +8,9 @@ export default {
                 'md-max': { max: '767px' },
                 'lg-max': { max: '1023px' },
             },
+            borderRadius: {
+                '5xl': '2.78125rem',
+            },
         },
         colors: {
             white: '#FFFFFF',
@@ -21,6 +24,7 @@ export default {
             green: {
                 100: '#E8F5E2',
                 400: '#9BC588',
+                500: '#779469',
                 600: '#608A4D',
                 800: '#6C7667',
             },
