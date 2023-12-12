@@ -2,6 +2,7 @@ import { HeroSection } from './components/hero-section'
 import { Container } from '@/components/ui/objects/container/container'
 import { InstructionSection } from './components/instruction-section'
 import { Sponsors } from '@/components/common/sponsors/sponsors'
+import { OffersSection } from './components/offers-section'
 
 export const Home = () => {
     return (
@@ -12,6 +13,7 @@ export const Home = () => {
                 <InstructionSection />
             </div>
             <Sponsors />
+            <OffersSection />
         </Container>
     )
 }
