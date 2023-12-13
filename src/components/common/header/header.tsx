@@ -9,12 +9,12 @@ import { Button } from '@/components/ui/atoms/button/buttons'
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <header className="border-b border-black">
+        <header className="relative z-50 border-b border-black">
             <Container className="flex h-20 items-center justify-between   py-4">
                 <Logo />
                 <nav className="flex items-center">
                     <div
-                        className={cn('block', {
+                        className={cn('flex flex-col items-center gap-10', {
                             '': !isMenuOpen,
                             'md-max:fixed md-max:right-0 md-max:top-0  md-max:h-screen md-max:w-full md-max:bg-green-600':
                                 isMenuOpen,
@@ -22,16 +22,21 @@ export const Header = () => {
                     >
                         <Menu
                             className={cn(
-                                'flex-row gap-5 text-center md-max:mt-20 md-max:text-white',
+                                'flex flex-row gap-5 text-center text-xl xl:gap-10 md-max:mt-20 md-max:text-white',
                                 {
-                                    'md-max:flex': isMenuOpen,
+                                    'md-max:flex-col': isMenuOpen,
                                     'md-max:hidden': !isMenuOpen,
                                 },
                             )}
                         />
+                        {isMenuOpen && (
+                            <Button className="flex items-center gap-3 md:hidden">
+                                Start Saving <ArrowDown weight="bold" />
+                            </Button>
+                        )}
                     </div>
                     <button
-                        className="hidden md-max:block"
+                        className="ml-auto hidden md-max:block"
                         aria-label="menu button"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
@@ -56,7 +61,7 @@ export const Header = () => {
                         )}
                     </button>
                 </nav>
-                <Button className="gap-3">
+                <Button className="hidden items-center gap-3 md:flex">
                     Start Saving <ArrowDown weight="bold" />
                 </Button>
             </Container>

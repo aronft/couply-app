@@ -1,5 +1,10 @@
 import { Avatar } from '@/components/ui/molecules/avatar/avatar'
 import User from '@/assets/user-1.png'
+import User2 from '@/assets/user-2.png'
+import User3 from '@/assets/user-3.png'
+import User4 from '@/assets/user-4.png'
+import User5 from '@/assets/user-5.png'
+
 import { cn } from '@/utils/class-name'
 export const HeroSection = ({ className }: { className?: string }) => {
     return (
@@ -42,9 +47,15 @@ export const HeroSection = ({ className }: { className?: string }) => {
                 <div className="flex flex-col gap-4">
                     <p className="capitalize">used by over 500,000 peeps</p>
                     <div className="flex items-center">
-                        <Avatar src={User} alt="Person" />
+                        <Avatar src={User2} alt="Person" className="-ml-3" />
                         <Avatar
-                            src={User}
+                            src={User3}
+                            alt="Person"
+                            variant={'border'}
+                            className="-ml-3"
+                        />
+                        <Avatar
+                            src={User4}
                             alt="Person"
                             variant={'border'}
                             className="-ml-3"
@@ -56,13 +67,7 @@ export const HeroSection = ({ className }: { className?: string }) => {
                             className="-ml-3"
                         />
                         <Avatar
-                            src={User}
-                            alt="Person"
-                            variant={'border'}
-                            className="-ml-3"
-                        />
-                        <Avatar
-                            src={User}
+                            src={User5}
                             alt="Person"
                             variant={'border'}
                             className="-ml-3"

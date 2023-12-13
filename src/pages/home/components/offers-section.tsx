@@ -10,7 +10,7 @@ export const OffersSection = () => {
                 <OfferList offers={Offers} className="-translate-y-20" />
                 <a
                     href=""
-                    className="flex items-center justify-center gap-2 underline lg:justify-start"
+                    className="flex items-center justify-center gap-2 text-2xl underline lg:justify-start"
                 >
                     <Eye />
                     View all offers

@@ -42,6 +42,9 @@ export default {
                 800: '#6C7667',
             },
         },
+        fontFamily: {
+            sans: ['Nunito Sans', 'sans-serif'],
+        },
     },
     plugins: [],
 }

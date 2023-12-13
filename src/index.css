@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 
-body {
-    @apply bg-green-100;
-}
 
 /*
   Josh's Custom CSS Reset
@@ -34,3 +31,23 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }  
+
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    src: url('/fonts/NunitoSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    src: url('/fonts/NunitoSans-Regular.ttf') format('truetype');
+
+}
+
+body {
+    @apply bg-green-100;
+    @apply font-sans;   
+    font-weight: 400;
+}

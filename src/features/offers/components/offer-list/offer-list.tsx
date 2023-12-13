@@ -17,12 +17,12 @@ export const OfferList = ({ offers, className }: OfferListProps) => {
         >
             {offers.map((offer, index) => (
                 <li
+                    key={offer.id}
                     className={cn({
                         'xl:col-span-2': index === 0 || index % 4 === 0,
                     })}
                 >
                     <OfferCardContainer
-                        key={offer.id}
                         offer={offer}
                         className={cn(
                             'lg:flex-col-reverse xl:flex-col-reverse',
