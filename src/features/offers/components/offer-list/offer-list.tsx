@@ -22,15 +22,18 @@ export const OfferList = ({ offers, className }: OfferListProps) => {
                         'xl:col-span-2': index === 0 || index % 4 === 0,
                     })}
                 >
-                    <OfferCardContainer
-                        offer={offer}
-                        className={cn(
-                            'lg:flex-col-reverse xl:flex-col-reverse',
-                            {
-                                'xl:flex-col': index === 0 || index % 4 === 0,
-                            },
-                        )}
-                    />
+                    <a href="#" aria-label={offer.title}>
+                        <OfferCardContainer
+                            offer={offer}
+                            className={cn(
+                                'lg:flex-col-reverse xl:flex-col-reverse',
+                                {
+                                    'xl:flex-col':
+                                        index === 0 || index % 4 === 0,
+                                },
+                            )}
+                        />
+                    </a>
                 </li>
             ))}
         </ul>
