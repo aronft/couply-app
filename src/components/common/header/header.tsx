@@ -37,7 +37,7 @@ export const Header = () => {
                     </div>
                     <button
                         className="ml-auto hidden md-max:block"
-                        aria-label="menu button"
+                        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
