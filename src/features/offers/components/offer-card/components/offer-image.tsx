@@ -19,10 +19,12 @@ export const OfferImage = ({ image, alt }: OfferImageProps) => {
     }
 
     return (
-        <img
-            className="h-[200px] w-full object-cover"
-            src={imageToShow}
-            alt={altToShow}
-        />
+        <div className="overflow-hidden">
+            <img
+                className="h-[200px] w-full object-cover transition-transform hover:[transform:scale(1.3)]"
+                src={imageToShow}
+                alt={altToShow}
+            />
+        </div>
     )
 }
