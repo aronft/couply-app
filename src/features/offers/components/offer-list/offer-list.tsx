@@ -1,4 +1,3 @@
-import { UiList } from '@/components/ui/objects/ui-list/ui-list'
 import { Offer } from '../../models/offec.model'
 import { OfferCardContainer } from '../offer-card/containers/offer-card-container'
 import { cn } from '@/utils/class-name'
