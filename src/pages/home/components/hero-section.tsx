@@ -14,7 +14,7 @@ export const HeroSection = ({ className }: { className?: string }) => {
                 className,
             )}
         >
-            <h1 className="relative inline max-w-2xl text-center text-3xl font-bold leading-relaxed lg:text-left  lg:text-5xl lg:leading-relaxed xl:max-w-4xl ">
+            <h1 className="animate-bottom-to-top relative inline max-w-2xl text-center text-3xl font-bold leading-relaxed  lg:text-left lg:text-5xl lg:leading-relaxed xl:max-w-4xl ">
                 Shopping with coupons, applied automatically!
                 <svg
                     className=" absolute right-0 top-0 hidden lg:block"
@@ -76,11 +76,11 @@ export const HeroSection = ({ className }: { className?: string }) => {
                 </div>
 
                 <div className="hidden lg:block">
-                    <div className="rounded-5xl flex items-center gap-5 bg-white px-5 py-4">
+                    <div className="flex items-center gap-5 rounded-5xl bg-white px-5 py-4">
                         <Avatar src={User} alt="Person" className="h-16 w-16" />
                         <div className="flex flex-col gap-1">
                             <p className="">Holy sh*t, I saved $500!</p>
-                            <span className="text-green-500 font-bold">
+                            <span className="font-bold text-green-500">
                                 -Janey Doe
                             </span>
                         </div>

@@ -1,7 +1,6 @@
 import { Logo } from '@/components/ui/atoms/logo/logo'
 import { Container } from '@/components/ui/objects/container/container'
 import { UiList } from '@/components/ui/objects/ui-list/ui-list'
-import { SpotifyLogo } from '@phosphor-icons/react'
 import { Menu } from '../menu/menu'
 
 export const Footer = () => {
